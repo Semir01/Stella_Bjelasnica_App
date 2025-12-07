@@ -1,0 +1,75 @@
+.main{
+    background-color: rgba(53, 79, 45, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.full-image-stella, .back-image-stella, .stella-logo{
+    width: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.full-image-stella {
+    background-image: url('../../../assets/images/Stella-FullImage-Front.jpg');
+    height: 323px;
+}
+
+.stella-logo{
+    background-image: url('../../../assets/images/Stella-Logo.png');
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 3px solid rgba(45, 153, 11, 1);
+}
+
+.control-buttons{
+    width: auto;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.control-buttons p{
+    color: white;
+    font-size: 40px;
+    margin-bottom: 30px;
+    width: auto;
+    text-align: center;
+}
+
+.buttons-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buttons-navigation button{
+    width: 320px;
+    height: 60px;
+    font-size: 24px;
+    background-color: rgba(73, 120, 58, 1);
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.buttons-navigation button:hover{
+    background-color: rgb(109, 163, 87);
+     border: 2px solid white;
+}
+
+.back-image-stella{
+    background-image: url('../../../assets/images/Stella-FullImage-Back.jpg');
+    height: 282px;
+}
+
