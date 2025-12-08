@@ -1,0 +1,19 @@
+.main{
+    background-color: rgba(53, 79, 45, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.full-image-stella{
+    width: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.full-image-stella {
+    background-image: url('../../../assets/images/Stella-FullImage-Front.jpg');
+    height: 323px;
+    width: 100%;
+}
