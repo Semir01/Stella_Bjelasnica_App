@@ -11,6 +11,7 @@ import { filter } from 'rxjs/operators';
   template: `
     <app-navbar *ngIf="showNavBar"></app-navbar>
     <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
   `
 })
 export class App {
