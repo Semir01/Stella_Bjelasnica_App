@@ -16,13 +16,16 @@ import { filter } from 'rxjs/operators';
 })
 export class App {
   showNavBar = true;
+  onActivate() {
+    const path = window.location.pathname;
 
-  constructor(private router: Router) {
-    this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe((event: any) => {
+    // GitHub Pages root
+    const isHome =
+      path === '/' ||
+      path === '/Stella_Bjelasnica_App/' ||
+      path === '/Stella_Bjelasnica_App';
 
-        this.showNavBar = event.urlAfterRedirects !== '/home';
-      });
+    this.showNavBar = !isHome;
   }
+
 }
