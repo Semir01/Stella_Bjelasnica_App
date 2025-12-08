@@ -48,7 +48,9 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/Stella_Bjelasnica_App/"
+
             },
             "development": {
               "optimization": false,
