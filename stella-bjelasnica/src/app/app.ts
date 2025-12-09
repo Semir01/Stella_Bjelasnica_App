@@ -11,21 +11,24 @@ import { filter } from 'rxjs/operators';
   template: `
     <app-navbar *ngIf="showNavBar"></app-navbar>
     <router-outlet></router-outlet>
-    <router-outlet></router-outlet>
   `
 })
 export class App {
-  showNavBar = true;
-  onActivate() {
-    const path = window.location.pathname;
+  showNavBar = false;
 
-    // GitHub Pages root
-    const isHome =
-      path === '/' ||
-      path === '/Stella_Bjelasnica_App/' ||
-      path === '/Stella_Bjelasnica_App';
+  constructor(private router: Router) {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        const url = (event as NavigationEnd).urlAfterRedirects;
 
-    this.showNavBar = !isHome;
+        const isHome =
+          url === '/' ||
+          url === '/home' ||
+          url === '/Stella_Bjelasnica_App/' ||
+          url === '/Stella_Bjelasnica_App';
+
+        this.showNavBar = !isHome;
+      });
   }
-
 }
