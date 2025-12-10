@@ -11,27 +11,17 @@
 
         <div class="apartments-search">
             <div class="apartments-slider">
-                <p class="flour-number">Garaža 1 </p>
+                <p class="flour-number">{{names[currentIndex]}}</p>
                 <div class="indicators">
-                    <div class="garage1"></div>
-                    <div class="garage2"></div>
-                    <div class="flour1"></div>
-                    <div class="flour2"></div>
-                    <div class="flour3"></div>
-                    <div class="flour4"></div>
-                    <div class="flour5"></div>
+                    <div *ngFor="let item of images; let i = index" class="indicator"
+                        [class.active]="i === currentIndex">
+                    </div>
                 </div>
                 <div class="slider">
-                    <button class="arrow left">&#10094;</button>
-                    <button class="arrow right">&#10095;</button>
-                    <div class="slides">
-                        <img src="assets/images/garaže1.jpg" alt="">
-                        <img src="assets/images/garaže2.jpg" alt="">
-                        <img src="assets/images/sprat1.jpg" alt="">
-                        <img src="assets/images/sprat2.jpg" alt="">
-                        <img src="assets/images/sprat3.jpg" alt="">
-                        <img src="assets/images/sprat4.jpg" alt="">
-                        <img src="assets/images/sprat5.jpg" alt="">
+                    <button class="arrow left" (click)="prevSlide()">&#10094;</button>
+                    <button class="arrow right" (click)="nextSlide()">&#10095;</button>
+                    <div class="slides" [ngStyle]="{ transform: 'translateX(-' + currentIndex * 100 + '%)' }">
+                        <img *ngFor="let img of images" [src]="img" alt="">
                     </div>
                 </div>
             </div>
