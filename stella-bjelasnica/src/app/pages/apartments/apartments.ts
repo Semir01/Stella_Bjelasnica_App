@@ -12,8 +12,6 @@ export class Apartments {
 
 
   names = [
-    'Garaža 1',
-    'Garaža 2',
     'Sprat 1',
     'Sprat 2',
     'Sprat 3',
@@ -22,8 +20,6 @@ export class Apartments {
   ];
 
    images = [
-    'assets/images/garaže1.jpg',
-    'assets/images/garaže2.jpg',
     'assets/images/sprat1.jpg',
     'assets/images/sprat2.jpg',
     'assets/images/sprat3.jpg',
