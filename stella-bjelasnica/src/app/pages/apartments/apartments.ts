@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; 
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ApartmaniService } from '../../services/apartmani';
+import { Apartment } from '../../models/apartment-model';
 
 @Component({
   selector: 'app-apartments',
@@ -8,7 +10,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './apartments.html',
   styleUrl: './apartments.scss',
 })
-export class Apartments {
+export class Apartments implements OnInit {
 
 
   names = [
@@ -19,7 +21,7 @@ export class Apartments {
     '== Sprat 5 =='
   ];
 
-   images = [
+  images = [
     'assets/images/sprat1.jpg',
     'assets/images/sprat2.jpg',
     'assets/images/sprat3.jpg',
@@ -36,4 +38,20 @@ export class Apartments {
   prevSlide() {
     this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
   }
+
+  constructor(private apartmaniService: ApartmaniService) { }
+  apartmani: Apartment[] = [];
+
+  ngOnInit() {
+    this.apartmani = this.apartmaniService.getApartmani();
+  }
+
+  get aktivniSprat(): number {
+    return this.currentIndex + 1;
+  }
+
+  getApartmaniZaTrenutniSprat(): Apartment[] {
+    return this.apartmani.filter(a => a.sprat === this.aktivniSprat);
+  }
+
 }
