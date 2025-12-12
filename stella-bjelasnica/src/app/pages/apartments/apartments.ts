@@ -12,11 +12,11 @@ export class Apartments {
 
 
   names = [
-    'Sprat 1',
-    'Sprat 2',
-    'Sprat 3',
-    'Sprat 4',
-    'Sprat 5'
+    '== Sprat 1 ==',
+    '== Sprat 2 ==',
+    '== Sprat 3 ==',
+    '== Sprat 4 ==',
+    '== Sprat 5 =='
   ];
 
    images = [
