@@ -2,7 +2,8 @@ export interface Apartment{
     Id: number;
     sprat: number;
     broj: number;
-    status: 'slobodan' | 'rezervisan' | 'prodat';
+    naziv: string;
+    status: 'Slobodan' | 'Rezervisan' | 'Prodat';
     x: number;
     y: number;
 }

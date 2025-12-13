@@ -46,71 +46,20 @@
         <div class="list-of-apartments">
             <p class="list-title">Ponuđeni apartmani</p>
             <div class="list">
-                <div class="apartment-item">
+                <div *ngFor="let a of getApartmaniZaTrenutniSprat()" class="apartment-item">
                     <img src="assets/images/apartmanShowImage.jpg" alt="">
                     <div class="apartment-info">
-                        <p class="apartment-name">Apartman 1</p>
+                        <p class="apartment-name">{{ a.naziv }}</p>
                         <button>Pogledaj</button>
-                        <p class="apartment-status">Slobodan</p>
+                        <p class="apartment-status" [ngClass]="a.status">/// {{ a.status }} ///</p>                    
                     </div>
                 </div>
-                <div class="apartment-item">
-                    <img src="assets/images/apartmanShowImage.jpg" alt="">
-                    <div class="apartment-info">
-                        <p class="apartment-name">Apartman 2</p>
-                        <button>Pogledaj</button>
-                        <p class="apartment-status">Prodato</p>
-                    </div>
-                </div>
-                <div class="apartment-item">
-                    <img src="assets/images/apartmanShowImage.jpg" alt="">
-                    <div class="apartment-info">
-                        <p class="apartment-name">Apartman 3</p>
-                        <button>Pogledaj</button>
-                        <p class="apartment-status">Rezervisan</p>
-                    </div>
-                </div>
-                <div class="apartment-item">
-                    <img src="assets/images/apartmanShowImage.jpg" alt="">
-                    <div class="apartment-info">
-                        <p class="apartment-name">Apartman 4</p>
-                        <button>Pogledaj</button>
-                        <p class="apartment-status">Prodato</p>
-                    </div>
+
+                <!-- Ako nema apartmana, prikaži poruku -->
+                <div *ngIf="getApartmaniZaTrenutniSprat().length === 0">
+                    <p>Nema apartmana za ovaj sprat.</p>
                 </div>
             </div>
-            <div class="apartment-item">
-                <img src="assets/images/apartmanShowImage.jpg" alt="">
-                <div class="apartment-info">
-                    <p class="apartment-name">Apartman 1</p>
-                    <button>Pogledaj</button>
-                    <p class="apartment-status">Slobodan</p>
-                </div>
-            </div>
-            <div class="apartment-item">
-                <img src="assets/images/apartmanShowImage.jpg" alt="">
-                <div class="apartment-info">
-                    <p class="apartment-name">Apartman 2</p>
-                    <button>Pogledaj</button>
-                    <p class="apartment-status">Prodato</p>
-                </div>
-            </div>
-            <div class="apartment-item">
-                <img src="assets/images/apartmanShowImage.jpg" alt="">
-                <div class="apartment-info">
-                    <p class="apartment-name">Apartman 3</p>
-                    <button>Pogledaj</button>
-                    <p class="apartment-status">Rezervisan</p>
-                </div>
-            </div>
-            <div class="apartment-item">
-                <img src="assets/images/apartmanShowImage.jpg" alt="">
-                <div class="apartment-info">
-                    <p class="apartment-name">Apartman 4</p>
-                    <button>Pogledaj</button>
-                    <p class="apartment-status">Prodato</p>
-                </div>
-            </div>
+        </div>
     </div>
-</div>
 </div>

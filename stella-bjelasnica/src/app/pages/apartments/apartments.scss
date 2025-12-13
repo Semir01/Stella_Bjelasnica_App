@@ -169,7 +169,7 @@
     background-color: rgb(16, 165, 16);
 }
 .reserved{
-    background-color: rgb(255, 255, 2);
+    background-color: orange;
 }
 .sold{
     background-color: red;
@@ -183,12 +183,13 @@
 }
 
 .list-title{
-    width: 100%;
+    width: 98%;
     text-align: start;
     font-size: 24px;
     font-weight: bold;
     border-bottom: 2px solid black;
     padding-left: 10px;
+    padding-bottom: 10px;
 }
 
 .list{
@@ -197,7 +198,7 @@
 }
 
 .apartment-item{
-    justify-content: space-around;
+    justify-content: space-around; 
 }
 
 .apartment-item img{
@@ -209,10 +210,13 @@
 .apartment-info{
     display: flex;
     flex-direction: column;
+    justify-content:center;
+    align-items: center;
     gap: 10px;
     width: 50%;
-    background-color: whitesmoke;
     padding: 7px;
+    background-color: rgba(90, 89, 89, 0.2);
+    border-radius: 10px;
 }
 
 .apartment-name{
@@ -225,39 +229,32 @@
     border: none;
     background-color: rgba(73, 120, 58, 1);
     color: white;
-    border-radius: 10px;
-    font-size: 18px;
+    border-radius: 8px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     width:180px;
+    letter-spacing: 1px;
 }
 
 .apartment-info button:hover{
     background-color: rgb(50, 150, 10);
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 .apartment-status{
-    color:  rgb(16, 165, 16);
+    color:  black;
     font-weight: bold;
     font-style: italic;
+    letter-spacing: 2px;
 }
 
-.next-page-apartment{
-    border-top: 2px solid black;
-    justify-content: end;
-    height: 50px;
+.Slobodan {
+  color: green;
 }
-
-.next-page-apartment a{
-    text-decoration: none;
-    margin-right: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    color: black;
+.Rezervisan {
+  color: rgb(230, 150, 3);
 }
-
-.next-page-apartment a:hover{
-    color:  rgb(16, 165, 16);
-    border-bottom: 1px solid  rgb(16, 165, 16);
+.Prodat {
+  color: red;
 }
