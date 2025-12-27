@@ -1,0 +1,46 @@
+<div class="overlayer">
+    <div class="modal-main">
+        <div class="modal-header">
+            <button class="close-button" (click)="close.emit()">X</button>
+        </div>
+        <div class="modal-body">
+            <div class="details"> 
+                <h2>{{ apartment.naziv }}</h2>
+                <div class="detail-container">
+                    <p>Kvadratura:</p>
+                    <p>{{ apartment.kvadratura }} m²</p>
+                </div>     
+                <div class="detail-container">
+                    <p>Broj soba:</p>
+                    <p>{{ apartment.brojSoba }}</p>
+                </div>
+                <div class="detail-container">
+                    <p>Status:</p>
+                    <p>{{ apartment.status }}</p>
+                </div>
+            </div>
+
+            <div class="slider">
+                <button class="arrow left" (click)="prevSlide()">&#10094;</button>
+                <button class="arrow right" (click)="nextSlide()">&#10095;</button>
+                <div class="slides" [ngStyle]="{ transform: 'translateX(-' + currentIndex * 100 + '%)' }">
+                    <img *ngFor="let img of apartment.images" [src]="img" alt="">
+                </div>
+            </div>
+
+            <p class="infoTitle">Interijer apartmana</p>
+
+            <div class="details-section">
+                <h2>Detalji</h2>
+                <p>Apartman se nalazi na prizemlju sa predivnom terasom koja se proteže preko cijelog prostora.
+                U sklopu apartmana je dnevni boravak sa kuhinjom i trpezarijom, dvije spavaće sobe, kupatilo.
+                Apartman je kompletno namješten i opremljen svim potrebnim stvarima za ugodan boravak.
+                </p>
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button>Pošalji zahtjev</button>
+        </div>
+    </div>
+</div>

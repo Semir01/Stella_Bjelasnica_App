@@ -1,0 +1,155 @@
+.overlayer{
+    position: fixed;       /* fiksiran preko cijelog viewporta */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 999999999;    /* vrlo visok, preko svega */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-main{
+    background-color: rgba(53, 79, 45, 1) ;
+    position: absolute;
+    left: 50%;            
+    transform: translateX(-50%); 
+    width: 100%;
+    height: 80%;
+    z-index: 9999999999;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    overflow: scroll;
+}
+
+.modal-header, .modal-footer{
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+.close-button{
+    background: none;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    width: 35px;
+}
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.details{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 85%;
+}
+
+.details h2, .details-section h2{
+    letter-spacing: 2px;
+    width: 100%;
+    border-bottom: 2px solid white;
+}
+
+.detail-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.details p{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.slider {
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 300px;
+}
+
+.slides img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: rgba(0,0,0,0.5);
+    color:  rgb(64, 211, 6);
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    z-index: 10;
+    height: 300px;
+}
+
+.arrow.left { left: 0px; }
+.arrow.right { right: 0px; }
+
+
+.arrow:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+.infoTitle{
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+.details-section{
+    margin-top: 15px;
+    width: 85%;
+}
+
+.details-section p{
+    font-size: 15px;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.modal-footer{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.modal-footer button{
+    background-color: rgb(64, 211, 6);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+.modal-footer button:hover{
+    background-color: rgb(46, 151, 4);
+    border: 1px solid white;
+}

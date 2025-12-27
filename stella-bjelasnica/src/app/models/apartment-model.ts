@@ -6,4 +6,8 @@ export interface Apartment{
     status: 'Slobodan' | 'Rezervisan' | 'Prodat';
     x: number;
     y: number;
+    brojSoba?: number;  
+    kvadratura?: number;
+    images?: string[
+    ];
 }

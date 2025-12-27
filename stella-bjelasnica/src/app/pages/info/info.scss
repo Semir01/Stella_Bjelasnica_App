@@ -6,17 +6,13 @@
     justify-content: center;
 }
 
-.full-image-stella{
-    width: auto;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 .full-image-stella {
     background-image: url('../../../assets/images/Stella-FullImage-Front.jpg');
-    height: 323px;
-    width: 100%;
+    height: 240px;
+    width: 100%; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .content-stella{
@@ -50,8 +46,8 @@
 }
 
 .info-container{
-    background-color: rgb(252, 252, 252, 0.4);
-    width: 90%;
+    background-color: rgb(252, 252, 252, 0.2);
+    width: 100%;
     height: 100%;
     text-align: center;
 }

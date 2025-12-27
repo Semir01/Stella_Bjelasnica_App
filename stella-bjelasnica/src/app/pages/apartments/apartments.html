@@ -50,7 +50,7 @@
                     <img src="assets/images/apartmanShowImage.jpg" alt="">
                     <div class="apartment-info">
                         <p class="apartment-name">{{ a.naziv }}</p>
-                        <button>Pogledaj</button>
+                        <button (click)="openModal(a)">Pogledaj</button>
                         <p class="apartment-status" [ngClass]="a.status">{{ a.status }}</p>                    
                     </div>
                 </div>
@@ -63,3 +63,9 @@
         </div>
     </div>
 </div>
+
+<app-apartment-modal
+    *ngIf="selectedApartment" 
+    [apartment]="selectedApartment" 
+    (close)="closeModal()">
+</app-apartment-modal>
