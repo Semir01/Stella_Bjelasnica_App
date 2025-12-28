@@ -1,0 +1,32 @@
+<div class="overlayer">
+  <div class="modal-main">
+    <h2>Zahtjeva za kupovinu</h2>
+
+    <div class="forme-section">
+        <div class="form-element">
+            <label for="imePrezime">Ime prezime</label>
+            <input type="text" placeholder="Ime i prezime">
+        </div>
+        
+        <div class="form-element">
+            <div class="info">
+                <label for="email">Email</label>
+                <p>Unos email adrese nije obavezan</p>
+            </div>
+            <input type="email" placeholder="Email">
+        </div>
+
+        <div class="form-element">
+            <label for="telefon">Telefon</label>
+            <input type="tel" placeholder="Telefon">
+        </div>
+    </div>
+   
+    <div class="control-section">
+        <button >Pošalji</button>
+        <button (click)="close.emit()">Otkaži</button>
+    </div>
+    
+  </div>
+</div>
+

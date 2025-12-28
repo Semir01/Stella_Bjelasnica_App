@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Apartment } from '../../../models/apartment-model';
+import { RezervationModal } from '../../rezervation-modal/rezervation-modal/rezervation-modal'; 
 
 @Component({
   selector: 'app-apartment-modal',  
@@ -12,7 +13,7 @@ import { Apartment } from '../../../models/apartment-model';
 export class ApartmentModal {
   @Input() apartment!: Apartment;
   @Output() close = new EventEmitter<void>();
-
+  @Output() openReservation = new EventEmitter<void>();
 
   onOverlayClick(event: MouseEvent): void {
    if ((event.target as HTMLElement).classList.contains('overlay')) {
@@ -30,5 +31,10 @@ export class ApartmentModal {
   prevSlide(): void {
     if (!this.apartment.images) return;
     this.currentIndex = (this.currentIndex - 1 + this.apartment.images.length) % this.apartment.images.length; // wrap-around
+  }
+
+  sendRequest(){
+    console.log("Emitting openReservation event");
+    this.openReservation.emit();
   }
 }

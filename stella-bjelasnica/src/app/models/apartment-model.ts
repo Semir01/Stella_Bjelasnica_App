@@ -8,6 +8,5 @@ export interface Apartment{
     y: number;
     brojSoba?: number;  
     kvadratura?: number;
-    images?: string[
-    ];
+    images?: string[];
 }

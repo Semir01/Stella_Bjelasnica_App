@@ -67,5 +67,11 @@
 <app-apartment-modal
     *ngIf="selectedApartment" 
     [apartment]="selectedApartment" 
-    (close)="closeModal()">
+    (close)="closeModal()"
+    (openReservation)="openReservation()">
 </app-apartment-modal>
+
+<app-rezervation-modal
+    *ngIf="showReservationModal"
+    (close)="showReservationModal = false">
+</app-rezervation-modal>    

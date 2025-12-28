@@ -1,0 +1,108 @@
+.overlayer{
+    position: fixed;       
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 999999999999;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-main{
+    background-color: rgba(53, 79, 45, 1) ;
+    position: absolute;
+    left: 50%;            
+    transform: translateX(-50%); 
+    width: 100%;
+    height: 70%;
+    z-index: 999999999999;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-main h2{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    border-bottom: 2px solid white;
+}
+
+.forme-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.form-element{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-element label{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    margin-left: 15px;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info p{
+    color: red;
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+.form-element input{
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.control-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.control-section button{
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    height: 50px;
+    width: 70%;
+    background-color: rgb(64, 211, 6);
+}
+
+.control-section button:hover{
+    background-color: rgb(46, 151, 4);
+    border: 1px solid white;
+}

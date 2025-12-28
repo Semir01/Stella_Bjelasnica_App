@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ApartmaniService } from '../../services/apartmani';
 import { Apartment } from '../../models/apartment-model';
 import { ApartmentModal } from "../../modals/apartment-modal/apartment-modal/apartment-modal";
+import { RezervationModal } from '../../modals/rezervation-modal/rezervation-modal/rezervation-modal';
 
 @Component({
   selector: 'app-apartments',  
   standalone: true,
-  imports: [CommonModule, ApartmentModal],
+  imports: [CommonModule, ApartmentModal, RezervationModal],
   templateUrl: './apartments.html',
   styleUrl: './apartments.scss',
 })
@@ -66,4 +67,10 @@ export class Apartments implements OnInit {
     document.body.style.overflow = 'auto';
   }
 
+  showReservationModal: boolean = false;
+  openReservation(){
+    console.log("Request OK");
+    this.selectedApartment = null;
+    this.showReservationModal = true;
+  }
 }
